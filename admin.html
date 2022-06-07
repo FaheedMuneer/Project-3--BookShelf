@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Page</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/styles/abc.css') }}">
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Username</th>
+			<th>Password</th>
+			<th>Timestamp</th>
+		</tr>
+		{% for d in details %}
+			<tr>
+				<td>{{d[0]}}</td>
+				<td>{{d[1]}}</td>
+				<td>{{d[2]}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

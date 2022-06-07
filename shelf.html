@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Shelf</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/styles/shelf1.css') }}">
+</head>
+<body>
+	<span>
+		<h4>{{ name + " is logged in!!" }}</h4>
+		<a href="/home">
+			<input type="submit" name="Home" value="Home">
+		</a>
+		<br>
+		<br>
+		<a href="/logout">
+			<input type="submit" name="Logout" value="Logout" class="box">
+		</a>
+	</span>
+
+	<a>
+		{% if books %}
+			<table class="center">
+				<tr>
+					<th>ISBN</th>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Year</th>
+				</tr>
+				{% for book in books %}
+					<tr>
+						<td><a href="/home/{{ book.isbn }}">{{ book.isbn }}</a></td>
+						<td>{{ book.title }}</td>
+						<td>{{ book.author }}</td>
+						<td>{{ book.year|string }}</td>
+					</tr>
+				{% endfor %}
+				</table>
+		{% endif %}
+	</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    background-image: url("two.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%; 
+    background-position: center;
+    background-size: cover;
+}
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+h2{
+    font-style: oblique;
+    font-size: xx-large;
+    color: seashell;
+}
+.box_field1:hover{
+    box-shadow:0 0 5px 2px rgba(248, 246, 246, 0.959) ;
+}
+.bg-text {
+    border: 3px solid #0f0f0f;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width:max-content;
+    padding: 20px;
+    background-color: rgb(12, 12, 12);
+  }

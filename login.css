@@ -1,0 +1,38 @@
+body {
+    background-color: red;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+	color: maroon;
+}
+
+.form {
+	padding-top: 100px;
+}
+
+.box {
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	background-color: yellow;
+	color: maroon;
+}
+
+.field1 {
+	width: 100px;
+	display: inline-block;
+	text-align: center;
+	margin: 20px;
+	margin-right: 30px;
+	margin-left: 30px;
+	background-color: yellow;
+	color: maroon;
+}

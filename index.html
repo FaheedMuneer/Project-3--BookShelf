@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book-Reviews</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/styles/cdd.css') }}">
+</head>
+<body class="center">
+	<h1>Welcome to Book Reviews home page!!</h1>
+
+	<h4>{{ name + " is logged in!!" }}</h4>
+	<a href="/logout">
+		<input type="submit" name="Logout" value="Logout" class="box">
+	</a>
+	<a href="/shelf/{{ name }}">
+		<input type="submit" name="shelf" value="MyShelf" class="box">
+	</a>
+	<br>
+	<br>
+	<form action="{{ url_for('auth') }}" method="POST">
+		<select name="selector">
+			<option value="isbn">ISBN</option>
+			<option value="author">Author</option>
+			<option value="title">Title</option>
+		</select>&nbsp;&nbsp;&nbsp;
+		<input type="text" name="searchkey" placeholder="Enter something to search for">&nbsp;&nbsp;&nbsp;
+		<input type="submit" name="keybutton" value="Submit" class="box">
+	</form>
+    <br><br><br>
+	<a>
+		{% if books %}
+			<table class="center">
+				<tr>
+					<th>ISBN</th>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Year</th>
+				</tr>
+				{% for book in books %}
+					<tr>
+						<td><a href="/home/{{ book.isbn }}">{{ book.isbn }}</a></td>
+						<td>{{ book.title }}</td>
+						<td>{{ book.author }}</td>
+						<td>{{ book.year|string }}</td>
+					</tr>
+				{% endfor %}
+				</table>
+		{% endif %}
+	</a>
+</body>
+</html>

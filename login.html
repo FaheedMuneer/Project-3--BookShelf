@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book-Reviews</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">
+</head>
+<body>
+	<h1 class="center">Please fill the form</h1>
+	<form action="{{ url_for('hello') }}" method="post">
+		<!-- <input type="text" name="name" placeholder="Enter your name"> -->
+		<input type="email" name="email" placeholder="Enter a valid email id">
+		<input type="password" name="password" placeholder="Password">
+		<!-- <button>Register</button>
+		<button>Login</button> -->
+		<input type="submit" name="login" value="Login">
+		<input type="submit" name="register" value="Register">
+	</form>
+</body>
+</html>
